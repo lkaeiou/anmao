@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.maomi.anmao.mapper.MultimediaMapper">
+
+<!--    	上传视频	-->
+    <insert id="multifileUpload" parameterType="Multimedia" useGeneratedKeys="true" keyProperty="vid">
+		insert into multimedia(iaddress,vaddress,title,brief,audit,uid)values(#{iaddress},#{vaddress},#{title},#{brief},'未审核',#{uid})
+	</insert>
+<!-- 根据视频标题模糊查询-->
+	<select id="findVideoByTitle" parameterType="String" resultType="Multimedia">
+			select * from multimedia where 1=1
+	<if test="title !=null and title !=''">
+		and title like '%${title}%'
+	</if>
+	</select>
+
+</mapper>

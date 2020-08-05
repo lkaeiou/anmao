@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵喵墙</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/main/css/photowall.css}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/main/img/favicon.ico}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" th:href="@{/main/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/animate.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/fontawesome-all.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/main/css/meanmenu.css}">
+    <link rel="stylesheet" th:href="@{/main/css/nice-select.css}">
+    <link rel="stylesheet" th:href="@{/main/css/slick.css}">
+    <link rel="stylesheet" th:href="@{/main/css/default.css}">
+    <link rel="stylesheet" th:href="@{/main/css/style.css}">
+    <link rel="stylesheet" th:href="@{/main/css/responsive.css}">
+    <link rel="stylesheet" th:href="@{/main/layui/css/layui.css}" media="all">
+</head>
+<body>
+
+<!-- header-area -->
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="top-cta">
+                        <p><i class="ti-headphone-alt"></i> 000 969 962 986 / 000 555 666 888</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="header-top-right text-right">
+                        <ul>
+                            <li>
+                                <select name="name" class="selected">
+                                    <option value="">USD</option>
+                                    <option value="">EUR</option>
+                                    <option value="">AUD</option>
+                                    <option value="">INR</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="name" class="selected-second">
+                                    <option value="">简体中文</option>
+                                    <option value="">English</option>
+                                    <option value="">Spanish</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header-sticky" class="menu-area pt-15 pb-15">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-3">
+                    <div class="logo-area">
+                        <a href="index.html"><img th:src="@{/main/img/logo/logo.png}" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="main-menu text-right">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li class="active"><a th:href="@{/main.html}">主页</a></li>
+                                <li><a th:href="@{/admin/videoList}">喵星探</a></li>
+                                <li><a th:href="@{/photoWall}">可爱喵</a></li>
+                                <li><a href="https://www.bagong.cn/cat/">喵推荐</a></li>
+                                <li><a th:href="@{/upload}">上传<i class="layui-icon" style="font-size: 20px;"> &#xe67c;</i></a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 d-none d-md-block">
+                    <div class="menu-icon text-right">
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#search-modal"><i class="ti-search"></i></a></li>
+                            <li><i class="layui-icon" style="font-size: 30px;">&#xe66f;</i>
+                                <ul class="minicart">
+                                    <li>
+                                        <div>
+                                            <div class="checkout-link">
+                                                <a th:href="@{/person}"><i class="layui-icon" style="font-size: 20px;">&#xe66f;</i> 个人信息</a>
+                                                <a class="red-color" href="checkout.html"><i class="layui-icon" style="font-size: 18px;">&#xe658;</i> 我的收藏</a>
+                                                <a href="cart.html"><i class="layui-icon" style="font-size: 18px;">&#xe68d;</i> 历史记录</a>
+                                                <a href="cart.html"><i class="layui-icon" style="font-size: 18px;">&#xe613;</i>我的关注</a>
+                                                <a class="red-color" href="index.html">退出登录</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                        <!-- breadcrumb-area -->
+                        <section id="parallax" class="breadcrumb-area fix">
+                            <div class="breadcrumb-shape b-shape01 layer" data-depth="0.10"><img th:src="@{/main/img/shape/b_shape01.png}" alt="shape"></div>
+                            <div class="breadcrumb-shape b-shape02 layer" data-depth="0.20"><img th:src="@{/main/img/shape/b_shape02.png}" alt="shape"></div>
+                            <div class="breadcrumb-shape b-shape03 layer" data-depth="0.30"><img th:src="@{/main/img/shape/b_shape03.png}" alt="shape"></div>
+                            <div class="breadcrumb-shape b-shape04 layer" data-depth="0.10"><img th:src="@{/main/img/shape/b_shape04.png}" alt="shape"></div>
+                            <div class="breadcrumb-shape b-shape05 layer" data-depth="0.50"><img th:src="@{/main/img/shape/b_shape05.png}" alt="shape"></div>
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="breadcrumb-wrap">
+                                            <h2>可爱喵</h2>
+                                            <nav>
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="index.html">主页</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">可爱喵</li>
+                                                    <li class="breadcrumb-item active" aria-current="page">喵喵墙</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 offset-xl-1 col-md-6">
+                                        <div class="breadcrumb-img text-center">
+                                            <img th:src="@{/main/img/bg/b_img.png}" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- breadcrumb-area-end -->
+                    <!-- Modal Search -->
+                    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wall">
+
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/1.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/2.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/3.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/4.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/5.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/6.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/7.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/8.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/9.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/10.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/11.jpg}" /></a>
+
+    </div>
+    <div class="article">
+    <a href="#"> <img th:src="@{/main/img/photowall/12.jpg}" /></a>
+
+</div>
+    <div class="article">
+    <a href="#"> <img th:src="@{/main/img/photowall/13.jpg}" /></a>
+
+</div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/14.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/15.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/16.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/17.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/18.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/19.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/20.jpg}" /></a>
+
+    </div>
+    <div class="article">
+    <a href="#"> <img th:src="@{/main/img/photowall/21.jpg}" /></a>
+
+    </div>
+    <div class="article">
+        <a href="#"> <img th:src="@{/main/img/photowall/22.jpg}" /></a>
+
+    </div>
+
+</div>
+
+<!-- JS here -->
+<script th:src="@{main/js/vendor/modernizr-3.5.0.min.js}"></script>
+<script th:src="@{main/js/vendor/jquery-1.12.4.min.js}"></script>
+<script th:src="@{main/js/popper.min.js}"></script>
+<script th:src="@{main/js/bootstrap.min.js}"></script>
+<script th:src="@{main/js/slick.min.js}"></script>
+<script th:src="@{main/js/jquery.meanmenu.min.js}"></script>
+<script th:src="@{main/js/ajax-form.js}"></script>
+<script th:src="@{main/js/wow.min.js}"></script>
+<script th:src="@{main/js/parallax.min.js}"></script>
+<script th:src="@{main/js/jquery.scrollUp.min.js}"></script>
+<script th:src="@{main/js/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{main/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{main/js/jquery.countdown.min.js}"></script>
+<script th:src="@{main/js/main.js}"></script>
+<script type="text/javascript" th:src="@{main/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{main/js/jaliswall.js}"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.wall').jaliswall({ item: '.article' });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <footer th:fragment="common_head">
+
+<!--    导航栏的公共代码-->
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LittleAngel - Store eCommerce HTML5 Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/main/img/favicon.ico}">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- CSS here -->
+        <link rel="stylesheet" th:href="@{/main/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/animate.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/fontawesome-all.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/themify-icons.css}">
+        <link rel="stylesheet" th:href="@{/main/css/meanmenu.css}">
+        <link rel="stylesheet" th:href="@{/main/css/nice-select.css}">
+        <link rel="stylesheet" th:href="@{/main/css/slick.css}">
+        <link rel="stylesheet" th:href="@{/main/css/default.css}">
+        <link rel="stylesheet" th:href="@{/main/css/style.css}">
+        <link rel="stylesheet" th:href="@{/main/css/responsive.css}">
+        <link rel="stylesheet" th:href="@{/main/layui/css/layui.css}" media="all">
+
+<!--顶部导航栏-->
+        <!-- header-area -->
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 d-none d-md-block">
+                            <div class="top-cta">
+                                <p><i class="ti-headphone-alt"></i> 000 969 962 986 / 000 555 666 888</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="header-top-right text-right">
+                                <ul>
+                                    <li>
+                                        <select name="name" class="selected">
+                                            <option value="">USD</option>
+                                            <option value="">EUR</option>
+                                            <option value="">AUD</option>
+                                            <option value="">INR</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select name="name" class="selected-second">
+                                            <option value="">简体中文</option>
+                                            <option value="">English</option>
+                                            <option value="">Spanish</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-sticky" class="menu-area pt-15 pb-15">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-md-3">
+                            <div class="logo-area">
+                                <a href="index.html"><img th:src="@{/main/img/logo/logo.png}" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <div class="main-menu text-right">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active"><a th:href="@{/main.html}">主页</a></li>
+                                        <li><a th:href="@{/admin/videoList}">喵星探</a></li>
+                                        <li><a th:href="@{/photoWall}">可爱喵</a></li>
+                                        <li><a href="https://www.bagong.cn/cat/">喵推荐</a></li>
+                                        <li><a th:href="@{/upload1}">上传<i class="layui-icon" style="font-size: 20px;"> &#xe67c;</i></a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 d-none d-md-block">
+                            <div class="menu-icon text-right">
+                                <ul>
+                                    <li><a href="#" data-toggle="modal" data-target="#search-modal"><i class="ti-search"></i></a></li>
+                                    <li><i class="layui-icon" style="font-size: 30px;">&#xe66f;</i>
+                                        <ul class="minicart">
+                                            <li>
+                                                <div>
+                                                    <div class="checkout-link">
+                                                        <a th:href="@{/person/all}"><i class="layui-icon" style="font-size: 20px;">&#xe66f;</i> 个人信息</a>
+                                                        <a class="red-color" href="checkout.html"><i class="layui-icon" style="font-size: 18px;">&#xe658;</i> 我的收藏</a>
+                                                        <a href="cart.html"><i class="layui-icon" style="font-size: 18px;">&#xe68d;</i> 历史记录</a>
+                                                        <a href="cart.html"><i class="layui-icon" style="font-size: 18px;">&#xe613;</i>我的关注</a>
+                                                        <a class="red-color" th:href="@{/LAR/logout}">退出登录</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Modal Search -->
+                            <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <form>
+                                            <input type="text" placeholder="Search here...">
+                                            <button><i class="fa fa-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-area-end -->
+
+
+
+        <script th:src="@{js/vendor/modernizr-3.5.0.min.js}"></script>
+        <script th:src="@{js/vendor/jquery-1.12.4.min.js}"></script>
+        <script th:src="@{js/popper.min.js}"></script>
+        <script th:src="@{js/bootstrap.min.js}"></script>
+        <script th:src="@{js/slick.min.js}"></script>
+        <script th:src="@{js/jquery.meanmenu.min.js}"></script>
+        <script th:src="@{js/ajax-form.js}"></script>
+        <script th:src="@{js/wow.min.js}"></script>
+        <script th:src="@{js/parallax.min.js}"></script>
+        <script th:src="@{js/jquery.scrollUp.min.js}"></script>
+        <script th:src="@{js/jquery.magnific-popup.min.js}"></script>
+        <script th:src="@{js/jquery.nice-select.min.js}"></script>
+        <script th:src="@{js/jquery.countdown.min.js}"></script>
+        <script th:src="@{js/main.js}"></script>
+
+
+
+
+
+    </footer>
+</head>
+</html>

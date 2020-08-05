@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="Css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="Css/style.css"/>
+    <script type="text/javascript" src="Js/jquery2.js"></script>
+    <script type="text/javascript" src="Js/jquery2.sorted.js"></script>
+    <script type="text/javascript" src="Js/bootstrap.js"></script>
+    <script type="text/javascript" src="Js/ckform.js"></script>
+    <script type="text/javascript" src="Js/common.js"></script>
+
+    <style type="text/css">
+        body {
+            font-size: 20px;
+            padding-bottom: 40px;
+            background-color: #e9e7ef;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header-main">
+    <div id="head" th:include="admin/public :: common_head"></div>
+</div>
+
+
+<div style="padding: 100px 0 0 300px;" >
+    <table class="table table-bordered table-hover definewidth m10">
+        <tr>
+            <th>id</th>
+            <th>user</th>
+            <th>password</th>
+            <th>role</th>
+            <th>Isblack</th>
+            <th>noBan</th>
+        </tr>
+        <tr>
+        <tr th:each="user : ${user}"><!-- 其中m是个临时变量，像for(User u : userList)那样中的u-->
+        <td th:text="${user.id}"/>
+        <td th:text="${user.user}"/>
+        <td th:text="${user.password}"/>
+        <td th:text="${user.role}" />
+            <td>
+                <form th:action="@{/admin/updateblackhouse}">
+                    <input type="hidden" th:value="${user.id}" name="id">
+                    <button type="submit" class="btn btn-primary">关小黑屋</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+<script>
+    $(function () {
+
+
+        $('#addnew').click(function () {
+
+            window.location.href = "goodsAdd.html";
+        });
+
+
+    });
+
+</script>

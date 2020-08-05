@@ -1,0 +1,275 @@
+﻿<!--<!DOCTYPE html>-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--	<meta xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--	<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" th:href="@{/personal/css/animate.css}">
+	<link rel="stylesheet" th:href="@{/personal/css/et-lineicons.css}">
+	<link rel="stylesheet" th:href="@{/personal/css/themify-icons.css}">
+	<link rel="stylesheet" th:href="@{/personal/css/bootstrap.css}">
+	<link rel="stylesheet" th:href="@{/personal/css/flexslider.css}">
+	<link rel="stylesheet" th:href="@{/personal/css/style.css}">
+
+	<link rel="stylesheet" th:href="@{/main/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/main/css/animate.min.css}">
+	<link rel="stylesheet" th:href="@{/main/css/fontawesome-all.min.css}">
+	<link rel="stylesheet" th:href="@{/main/css/themify-icons.css}">
+	<link rel="stylesheet" th:href="@{/main/css/meanmenu.css}">
+	<link rel="stylesheet" th:href="@{/main/css/nice-select.css}">
+	<link rel="stylesheet" th:href="@{/main/css/slick.css}">
+	<link rel="stylesheet" th:href="@{/main/css/default.css}">
+	<link rel="stylesheet" th:href="@{/main/css/style.css}">
+	<link rel="stylesheet" th:href="@{/main/css/responsive.css}">
+	<link rel="stylesheet" th:href="@{/main/layui/css/layui.css}" media="all">
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]-->
+	<script th:src="@{/personal/js/respond.min.js}"></script>
+	<!--<![endif]&ndash;&gt;-->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div id="addo-page"> <a href="#" class="js-addo-nav-toggle addo-nav-toggle"><i></i></a>
+	<!-- Sidebar Section -->
+	<aside id="addo-aside">
+		<!-- Logo -->
+		<div id="addo-logo"> <a href="#"><img th:src="@{/personal/images/about.jpg}" class="img-fluid mb-30 animate-box" data-animate-effect="fadeInLeft" alt=""><span></span></a> </div>
+		<!-- Menu -->
+		<nav id="addo-main-menu">
+			<ul>
+				<li><a href="#home">喵家</a></li>
+				<li><a href="#about">信息</a></li>
+				<li><a href="#services">收藏</a></li>
+				<li><a href="#portfolio">稿件管理-视频</a></li>
+				<li><a href="#news">稿件管理-专栏</a></li>
+			</ul>
+		</nav>
+
+	</aside>
+	<!-- Main Section -->
+	<div id="addo-main">
+		<!-- Home Section -->
+		<div id="home" class="section">
+			<div class="addo-hero js-fullheight" style="height: 888px;">
+				<!-- Slider -->
+				<div class="flexslider js-fullheight" style="height: 888px;">
+					<ul class="slides">
+						<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+							<div class="overlay-video">
+								<video autoplay="" loop="" muted="">
+									<source th:src="@{/personal/images/background.mp4}" type="video/mp4">
+								</video>
+							</div>
+							<div class="overlay-color"></div>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12 js-fullheight slider-text animated fadeInUp" style="height: 888px;">
+										<div class="slider-text-inner">
+											<div class="desc">
+												<div class="image_wrap"> <img th:src="@{/personal/images/adam.jpg}" alt="" draggable="false"> </div>
+												<h1>撸猫大师</h1>
+												<h2 class="cd-headline clip">
+													<span>我就是</span>
+													<span class="cd-words-wrapper" style="width: 68.6792px; overflow: hidden;">
+													  <b class="is-visible">喵天帝</b>
+													  <b class="is-hidden">&nbsp;喵星领袖</b>
+													  <b class="is-hidden">&nbsp;喵界刘德华</b>
+													</span>
+												</h2>
+											</div>
+											<div class="arrow bounce">
+												<a href="#about" data-scroll-nav="1" class="scroll">
+													<i class="ti-angle-double-down"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ol class="flex-control-nav flex-control-paging"></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
+			</div>
+		</div>
+		<!-- About Section -->
+		<div id="about" class="section">
+			<div class="addo-about">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12"> <span class="heading-meta">信息</span>
+							<h2 class="addo-heading animate-box" data-animate-effect="fadeInLeft">我</h2> </div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"> <img th:src="@{/personal/images/about.jpg}" class="img-fluid mb-30 animate-box" data-animate-effect="fadeInLeft" alt=""> </div>
+						<div class="col-md-11 animate-box" data-animate-effect="fadeInLeft"> <span class="heading-meta">ABOUT ME</span>
+							<h2 class="cd-headline clip">
+								<span>昵称&标签：撸猫大师 </span>
+								<span class="cd-words-wrapper" style="width: 54.7877px; overflow: hidden;">
+									<b class="is-visible">&橘猫爱好者</b>
+									<b class="is-hidden">&amp;撸猫成瘾者</b>
+									<b class="is-hidden">&amp; 猫咪专栏up</b>
+								</span>
+							</h2>
+						</div>
+						<div>
+							<form name="profile" method="get"  th:action="@{/person/update}">
+								<input type="text" name="profile" th:value="${person.getProfile()}" id="profile" >
+
+								<button type="submit" class="btn btn-primary">修改</button>
+							</form>
+							<div class="addo-about-contact-wrap">
+								<div class="row">
+									<div class="col-md-6">
+										<p><b>喵喵号:</b>[[${person.getId()}]]</p>
+										<p><b>喵名:</b> [[${person.getUser()}]]</p>
+										<p><b>喵等级:</b> [[${person.getRoleList().getName()}]]</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Skills Section -->
+
+		<!-- Services Section -->
+		<div id="services" class="section">
+			<div class="addo-services">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12"> <span class="heading-meta">收藏</span>
+							<h2 class="addo-heading animate-box" data-animate-effect="fadeInLeft">爱喵</h2> </div>
+					</div>
+					<div class="row" style="padding-left: 15px">
+						<div style="width: 10%;"><img th:src="@{/personal/images/01(1).jpg}"/></div><div style="width: 90%;padding-left: 10px">标题</div>
+					</div>
+					<div class="row" style="padding: 15px">
+						<div style="width: 10%;"><img th:src="@{/personal/images/01(1).jpg}"/></div><div style="width: 90%;padding-left: 10px">标题</div>
+					</div>
+					<div class="row" style="padding: 15px">
+						<div style="width: 10%;"><img th:src="@{/personal/images/01(1).jpg}"/></div><div style="width: 90%;padding-left: 10px">标题</div>
+					</div>
+					<div class="row" style="padding: 15px">
+						<div style="width: 10%;"><img th:src="@{/personal/images/01(1).jpg}"/></div><div style="width: 90%;padding-left: 10px">标题</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- References Section -->
+
+		<!-- Portfolio Section -->
+		<div id="portfolio" class="section">
+			<div class="addo-projects">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12"> <h3 class="heading-meta">稿件管理</h3>
+							<p class="addo-heading animate-box" data-animate-effect="fadeInLeft">我的投稿视频</p> </div>
+					</div>
+					<div th:each="m:${multimedia}" class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="shop-products mb-55">
+							<div class="sp-thumb">
+								<a href="#"><img th:src="${m.iaddress}" alt="items"></a>
+								<div class="product-action">
+									<div class="button-left">
+										<ul>
+											<li><a href="#" title="快速分享" class="pink-bg"><i class="ti-control-shuffle"></i></a>
+											</li>
+											<li><a href="#" title="稍后观看" class="blue-bg"><i class="ti-eye"></i></a></li>
+											<li><a href="#" title="收藏" class="green-bg"><i class="ti-heart"></i></a></li>
+										</ul>
+									</div>
+									<div class="cart-button">
+										<form th:action="@{/admin/player}">
+											<input type="hidden" th:value="${m.vaddress}" name="va">
+											<input type="submit" value="前往观看">
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="product-content text-center">
+								<h4><a href="single-product.html">[[${m.title}]]</a></h4>
+								<div class="price">
+									<span>[[${m.brief}]]</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- News Section -->
+		<div id="news" class="section">
+			<div class="addo-blog">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12"> <span class="heading-meta">稿件管理</span>
+							<h2 class="addo-heading animate-box" data-animate-effect="fadeInLeft">专栏</h2> </div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-4">
+							<div class="blog-entry animate-box" data-animate-effect="fadeInLeft">
+								<a href="#" class="blog-img"><img th:src="@{/personal/images/blog-05.jpg}" class="img-fluid2" alt=""></a>
+								<div class="desc">
+									<h3><a href="#">标题</a></h3>
+									<p>开头简介</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="blog-entry animate-box" data-animate-effect="fadeInLeft">
+								<a href="#" class="blog-img"><img th:src="@{/personal/images/blog-06.jpg}" class="img-fluid2" alt=""></a>
+								<div class="desc">
+									<h3><a href="#">标题</a></h3>
+									<p>开头简介</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="blog-entry animate-box" data-animate-effect="fadeInLeft">
+								<a href="#" class="blog-img"><img th:src="@{/personal/images/blog-02.jpg}" class="img-fluid2" alt=""></a>
+								<div class="desc">
+									<h3><a href="#">标题</a></h3>
+									<p>开头简介</p>
+
+								</div>
+							</div>
+						</div>
+						<!-- Contact Section -->
+
+						<!-- Footer -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Js -->
+<script th:src="@{/personal/js/jquery.min.js}"></script>
+<script th:src="@{/personal/js/jquery.easing.1.3.js}"></script>
+<script th:src="@{/personal/js/bootstrap.min.js}"></script>
+<script th:src="@{/personal/js/jquery.waypoints.min.js}"></script>
+<script th:src="@{/personal/js/jquery.flexslider-min.js}"></script>
+<script th:src="@{/personal/js/animated.headline.js}"></script>
+<script th:src="@{/personal/js/sticky-kit.min.js}"></script>
+
+<script th:src="@{/main/js/vendor/modernizr-3.5.0.min.js}"></script>
+<script th:src="@{/main/js/vendor/jquery-1.12.4.min.js}"></script>
+<script th:src="@{/main/js/popper.min.js}"></script>
+<script th:src="@{/main/js/bootstrap.min.js}"></script>
+<script th:src="@{/main/js/slick.min.js}"></script>
+<script th:src="@{/main/js/jquery.meanmenu.min.js}"></script>
+<script th:src="@{/main/js/ajax-form.js}"></script>
+<script th:src="@{/main/js/wow.min.js}"></script>
+<script th:src="@{/main/js/parallax.min.js}"></script>
+<script th:src="@{/main/js/jquery.scrollUp.min.js}"></script>
+<script th:src="@{/main/js/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{/main/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{/main/js/jquery.countdown.min.js}"></script>
+<script th:src="@{/main/js/main.js}"></script>
+
+</body>
+</html>

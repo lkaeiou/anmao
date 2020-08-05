@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>上传视频</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" th:href="@{/main/css/load2.css}">
+    <link rel="stylesheet" th:href="@{/main/css/load.css}">
+    <link rel="stylesheet" th:href="@{/main/css/font-awesome-4.7.0/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/login/css/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/login/css/style.css}">
+
+</head>
+<body th:style="'background: url('+ '/main/img/photowall/bssi.jpg' +');'">
+<div class="page-container">
+    <div class="left-content">
+        <div class="mother-grid-inner">
+
+            <div class="header-main">
+                <div id="head" th:include="main/public :: common_head"></div>
+            </div>
+
+            <div class="materialContainer" >
+                <form th:action="@{/multifileUpload}" method="post" enctype="multipart/form-data">
+                    <div class="box" style="background-color: lightyellow">
+                        <h1 th:inlines="text">文件上传</h1>
+                        <p>选择您要上传的视频: <input type="file" name="fileName" accept="video/*"/></p>
+                        <p>选择您的封面: <input type="file" name="fileName" accept="image/*"/></p>
+                        <p>标题: <input type="text" name="title"/></p>
+                        <p>简介: <input type="text" name="brief"/></p>
+                        <p><input type="submit" value="提交"/></p>
+                    </div>
+                </form>
+            </div>
+
+            <!--    <div>
+                    <h1 th:inlines="text">文件上传</h1>
+                    <form th:action="@{/multifileUpload}" method="post"   enctype="multipart/form-data">
+
+                        <p>选择您要上传的视频: <input type="file" name="fileName"   accept="video/*"/></p>
+                        <p>选择您的封面: <input type="file" name="fileName" accept="image/*"/></p>
+                        <p>标题: <input type="text" name="title" /></p>
+                        <p>简介: <input type="text" name="brief" /></p>
+                        <p><input type="submit" value="提交"/></p>
+                    </form>
+                </div>-->
+
+        </div>
+    </div>
+</div>
+<script th:src="@{/login/js/jquery.min.js}"></script>
+<script th:src="@{/login/js/index.js}"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html class="no-js" lang="" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>俺の猫</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" th:href="@{/main/img/favicon.ico}">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" th:href="@{/main/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/animate.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/fontawesome-all.min.css}">
+        <link rel="stylesheet" th:href="@{/main/css/themify-icons.css}">
+        <link rel="stylesheet" th:href="@{/main/css/meanmenu.css}">
+        <link rel="stylesheet" th:href="@{/main/css/nice-select.css}">
+        <link rel="stylesheet" th:href="@{/main/css/slick.css}">
+        <link rel="stylesheet" th:href="@{/main/css/default.css}">
+        <link rel="stylesheet" th:href="@{/main/css/style.css}">
+        <link rel="stylesheet" th:href="@{/main/css/responsive.css}">
+        <link rel="stylesheet" th:href="@{/main/layui/css/layui.css}" media="all">
+
+    </head>
+    <body>
+        <div class="header-main">
+            <div id="head" th:include="main/public :: common_head"></div>
+        </div>
+        <!-- main-area -->
+        <main>
+            <!-- slider-area -->
+            <div class="layui-row">
+                <div class="layui-col-md2">&nbsp;</div>
+                <div class="layui-col-md8">
+                    <div class="layui-carousel" id="test1">
+                        <div carousel-item>
+                            <div><img th:src="@{/main/img/carousel/a是否sf.jpg}" width="100%"/>条目1</div>
+                            <div><img th:src="@{/main/img/carousel/asf萨芬.jpg}" width="100%"/>条目2</div>
+                            <div><img th:src="@{/main/img/carousel/as撒fas.jpg}" width="100%"/>条目3</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md2">&nbsp;</div>
+            </div>
+
+            <script th:src="@{/main/layui/layui.js}"></script>
+            <script>
+                layui.use('carousel', function(){
+                    var carousel = layui.carousel;
+                    carousel.render({
+                        elem: '#test1'
+                        ,width: '100%' //设置容器宽度
+                        ,height: '400px'//设置高度
+                        ,arrow: 'always' //始终显示箭头
+                        //,anim: 'updown' //切换动画方式
+                    });
+                });
+            </script>
+                    <!-- slider-area-end -->
+                    <!-- collection-area -->
+                    <section class="collection-area pt-100">
+                        <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-collect mb-30 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="collect-thumb">
+                                    <a href="#"><img th:src="@{/main/img/collection/11单位11.jpg}" alt="img"></a>
+                                </div>
+                                <div class="collect-content green-bg">
+                                    <h4><a href="#"><i class="fas fa-star"></i>CAT MAFEI</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-collect mb-30 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="collect-thumb">
+                                    <a href="#"><img th:src="@{/main/img/collection/33肥33.jpg}" alt="img"></a>
+                                </div>
+                                <div class="collect-content blue-bg">
+                                    <h4><a href="#"><i class="fas fa-star"></i>CAT AG</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-collect mb-30 wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="collect-thumb">
+                                    <a href="#"><img th:src="@{/main/img/collection/22强无敌222.jpg}" alt="img"></a>
+                                </div>
+                                <div class="collect-content pink-bg">
+                                    <h4><a href="#"><i class="fas fa-star"></i>CAT LILY</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- collection-area-end -->
+            <!-- shop-area -->
+            <section class="shop-area pt-70 pb-40 p-relative">
+                <div class="arrivals-shape d-none d-xl-block"><img th:src="@{/main/img/shape/arrivals_shape.png}" alt="shape"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-10">
+                            <div class="section-title text-center mb-60">
+                                <h2>LOVE CAT</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div th:each="m:${multimedia}" class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="shop-products mb-55">
+                                <div class="sp-thumb">
+                                    <a href="#"><img th:src="${m.iaddress}" alt="items"></a>
+                                    <div class="product-action">
+                                        <div class="button-left">
+                                            <ul>
+                                                <li><a href="#" title="快速分享" class="pink-bg"><i class="ti-control-shuffle"></i></a>
+                                                </li>
+                                                <li><a href="#" title="稍后观看" class="blue-bg"><i class="ti-eye"></i></a></li>
+                                                <li><a href="#" title="收藏" class="green-bg"><i class="ti-heart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="cart-button">
+                                            <form th:action="@{/admin/player}">
+                                                <input type="hidden" th:value="${m.vaddress}" name="va">
+                                                <input type="submit" value="前往观看">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-content text-center">
+
+                                    <h4>[[${m.title}]]</a></h4>
+                                    <div class="price">
+                                        <span>[[${m.brief}]]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- main-area-end -->
+        <!-- footer -->
+        <footer class="footer-bg pt-95 pb-100 p-relative fix" style="background-image:url(../../../../../../../Desktop/main/img/bg/footer_bg.jpg)">
+            <div class="footer-shape f-shape1 d-none d-xl-block wow fadeInLeft" data-wow-delay="0.2s"><img th:src="@{/main/img/shape/footer_shape.png}" alt="img"></div>
+            <div class="footer-shape f-shape2 wow slideInDown" data-wow-delay="0.2s"><img th:src="@{/main/img/shape/features_cartoon.png}" alt="img"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-menu mb-20">
+                            <ul>
+                                <li><a href="#">主页</a></li>
+                                <li><a href="#">喵星探</a></li>
+                                <li><a href="#">可爱喵</a></li>
+                                <li><a href="#">喵推荐</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright-text">
+                            <p>&copy; Copyright dynamicweblab 2019. ALL Right <a href="#" title="#">Reserved</a>.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-social text-right mb-15">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="c-cards text-right">
+                            <img th:src="@{/main/img/bg/credit_cards.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+        <!-- Newsletter Popup Start -->
+
+        <!--<div class="newsletter-popup" id="subscribe-popup">
+            <div class="newsletter-popup-modal">
+                <a href="#" class="custom-close popup-close">
+                    <i class="ti-close"></i>
+                </a>
+                <div class="popup-content d-flex justify-content-end" style="background-image:url(../../../../../../../Desktop/main/img/newsletter/newsletter_img.jpg)">
+                    <div class="popup-body">
+                        <h2>今日推荐</h2>
+                        <p>编写简介</p>
+                        <div class="popup-form mt-35">
+                                <button class="btn">点击进入</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- Newsletter Popup End -->
+
+
+
+		<!-- JS here -->
+        <script th:src="@{/main/js/vendor/modernizr-3.5.0.min.js}"></script>
+        <script th:src="@{/main/js/vendor/jquery-1.12.4.min.js}"></script>
+        <script th:src="@{/main/js/popper.min.js}"></script>
+        <script th:src="@{/main/js/bootstrap.min.js}"></script>
+        <script th:src="@{/main/js/slick.min.js}"></script>
+        <script th:src="@{/main/js/jquery.meanmenu.min.js}"></script>
+        <script th:src="@{/main/js/ajax-form.js}"></script>
+        <script th:src="@{/main/js/wow.min.js}"></script>
+        <script th:src="@{/main/js/parallax.min.js}"></script>
+        <script th:src="@{/main/js/jquery.scrollUp.min.js}"></script>
+        <script th:src="@{/main/js/jquery.magnific-popup.min.js}"></script>
+        <script th:src="@{/main/js/jquery.nice-select.min.js}"></script>
+        <script th:src="@{/main/js/jquery.countdown.min.js}"></script>
+        <script th:src="@{/main/js/main.js}"></script>
+
+    </body>
+</html>

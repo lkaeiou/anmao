@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>视频列表</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/main/img/favicon.ico}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" th:href="@{/main/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/animate.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/fontawesome-all.min.css}">
+    <link rel="stylesheet" th:href="@{/main/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/main/css/meanmenu.css}">
+    <link rel="stylesheet" th:href="@{/main/css/nice-select.css}">
+    <link rel="stylesheet" th:href="@{/main/css/slick.css}">
+    <link rel="stylesheet" th:href="@{/main/css/default.css}">
+    <link rel="stylesheet" th:href="@{/main/css/style.css}">
+    <link rel="stylesheet" th:href="@{/main/css/responsive.css}">
+    <link rel="stylesheet" th:href="@{/main/layui/css/layui.css}" media="all">
+</head>
+<body>
+
+<!-- header-area -->
+
+<!-- header-area-end -->
+<!-- main-area -->
+<div>
+    <div class="header-main">
+        <div id="head" th:include="main/public :: common_head"></div>
+    </div>
+    <!-- breadcrumb-area -->
+    <section id="parallax" class="breadcrumb-area fix">
+        <div class="breadcrumb-shape b-shape01 layer" data-depth="0.10"><img th:src="@{/main/img/shape/b_shape01.png}"
+                                                                             alt="shape"></div>
+        <div class="breadcrumb-shape b-shape02 layer" data-depth="0.20"><img th:src="@{/main/img/shape/b_shape02.png}"
+                                                                             alt="shape"></div>
+        <div class="breadcrumb-shape b-shape03 layer" data-depth="0.30"><img th:src="@{/main/img/shape/b_shape03.png}"
+                                                                             alt="shape"></div>
+        <div class="breadcrumb-shape b-shape04 layer" data-depth="0.10"><img th:src="@{/main/img/shape/b_shape04.png}"
+                                                                             alt="shape"></div>
+        <div class="breadcrumb-shape b-shape05 layer" data-depth="0.50"><img th:src="@{/main/img/shape/b_shape05.png}"
+                                                                             alt="shape"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="breadcrumb-wrap">
+                        <h2>喵星探</h2>
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">miao~</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-md-6">
+                    <div class="breadcrumb-img text-center">
+                        <img th:src="@{/main/img/bg/b_img.png}" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb-area-end -->
+    <!--area-->
+    <div class="shop-mei">
+        <div class="inner-shop-products mt-60">
+            <div class="row">
+                <div th:each="m:${multimedia}" class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="shop-products mb-55">
+                        <div class="sp-thumb">
+                            <a href="#"><img th:src="${m.iaddress}" alt="items"></a>
+                            <div class="product-action">
+                                <div class="button-left">
+                                    <ul>
+                                        <li><a href="#" title="快速分享" class="pink-bg"><i class="ti-control-shuffle"></i></a>
+                                        </li>
+                                        <li><a href="#" title="稍后观看" class="blue-bg"><i class="ti-eye"></i></a></li>
+                                        <li><a href="#" title="收藏" class="green-bg"><i class="ti-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="cart-button">
+                                    <form th:action="@{/admin/player}">
+                                        <input type="hidden" th:value="${m.vaddress}" name="va">
+                                        <input type="submit" value="前往观看">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content text-center">
+
+                            <h4>[[${m.title}]]</a></h4>
+                            <div class="price">
+                                <span>[[${m.brief}]]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="pagination-wrap text-center">
+                    <ul>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#"><i class="ti-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- shaop-area-end -->
+</main>
+<!-- main-area-end -->
+<!-- footer -->
+<footer class="footer-bg pt-95 pb-100 p-relative fix">
+    <div class="footer-shape f-shape1 d-none d-xl-block wow rollIn" data-wow-delay="0.2s"><img
+            th:src="@{main/img/shape/footer_shape.png}" alt="img"></div>
+    <div class="footer-shape f-shape2 wow slideInDown" data-wow-delay="0.2s"><img
+            th:src="@{/main/img/shape/features_cartoon.png}" alt="img"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer-menu mb-20">
+                    <ul>
+                        <li><a href="#">主页</a></li>
+                        <li><a href="#">喵星探</a></li>
+                        <li><a href="#">可爱喵</a></li>
+                        <li><a href="#">喵推荐</a></li>
+                    </ul>
+                </div>
+                <div class="copyright-text">
+                    <p>&copy; Copyright dynamicweblab 2019. ALL Right <a href="#" title="#">Reserved</a>.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="c-cards text-right">
+                    <img th:src="@{/mian/img/bg/credit_cards.png}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-end -->
+
+
+<!-- JS here -->
+<script th:src="@{/main/js/vendor/modernizr-3.5.0.min.js}"></script>
+<script th:src="@{/main/js/vendor/jquery-1.12.4.min.js}"></script>
+<script th:src="@{/main/js/popper.min.js}"></script>
+<script th:src="@{/main/js/bootstrap.min.js}"></script>
+<script th:src="@{/main/js/slick.min.js}"></script>
+<script th:src="@{/main/js/jquery.meanmenu.min.js}"></script>
+<script th:src="@{/main/js/ajax-form.js}"></script>
+<script th:src="@{/main/js/wow.min.js}"></script>
+<script th:src="@{/main/js/parallax.min.js}"></script>
+<script th:src="@{/main/js/jquery.scrollUp.min.js}"></script>
+<script th:src="@{/main/js/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{/main/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{/main/js/jquery.countdown.min.js}"></script>
+<script th:src="@{/main/js/main.js}"></script>
+</body>
+</html>
